@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Student Name:   -->
+<html lang="en">
+  <script type="text/javascript" src="yelp.js"></script>
+  <head>
+    <title>Web Mashup: Display Best Restaurants on a Map</title>
+    <meta charset="utf-8"/>
+    
+    <style>
+      #map{
+        height: 500px;
+        width: 600px;
+      }
+      img{
+        height: 200px;
+        width: 200px;
+      }
+      body{
+        width: 90%;
+        margin: 0 auto;
+      }
+      li{
+        margin-top: 50px ;
+      }
+    </style>
+  </head>
+  <body>
+    <form onsubmit="event.preventDefault();">
+       <label>Search Terms: <input type="text" id="search"/></label>
+       <input type="button" onclick="sendRequest();" value="Find"/>
+    </form>
+    <div id="map"></div>
+    <ol id="displayText"></ol>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBLdIb7tdFDEh9msj75sWI4_UlebOms_8&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+  </body>
+</html>
